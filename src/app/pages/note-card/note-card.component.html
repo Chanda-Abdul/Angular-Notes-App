@@ -1,0 +1,28 @@
+<div #container
+     class="note-card-container">
+    <div class="note-card-content">
+        <div class="delete-note-button">
+            <span class="icon">
+                <fa-icon [icon]="deleteIcon"></fa-icon>
+            </span>
+        </div>
+        <h1 class="note-card-title">
+            <!-- {{title}}  -->
+            Lorem ipsum dolor sit amet.
+        </h1>
+        <div #noteText
+             class="note-card-body">
+            <p class="note-card-body-text">
+                <!-- {{body}} -->
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis aliquid dignissimos, assumenda
+                facilis quasi minima nobis eligendi dicta ad quam nisi nam explicabo ea enim ab autem eius voluptas
+                perferendis.
+            </p>
+            <div #truncator
+                 class="fade-out-truncation"></div>
+        </div>
+
+
+    </div>
+
+</div>
