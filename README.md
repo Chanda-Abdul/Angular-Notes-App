@@ -1,5 +1,71 @@
 # NotesFrontend
 
+## TO-DO
+
+- [ ] Implement Search/Filter functionality
+- [ ] add storage/database, to load with initial notes, and to persist data
+- [ ] add graphQL backend?
+- [ ] update styling to be simple and cohesive
+  - [ ] smaller notecards
+  - [ ] color palette
+  - [ ] scrollbar
+  - [ ] font pairings?
+  - [ ] review note text truncation
+  - [ ] review animations
+- [ ] deploy
+
+## Description
+
+Create an application that can be used to write, save, and delete notes. This application will use an express backend and save and retrieve note data from a JSON file.
+
+## User Story
+
+```
+AS A user, I want to be able to write and save notes
+
+I WANT to be able to delete notes I've written before
+
+SO THAT I can organize my thoughts and keep track of tasks I need to complete
+```
+
+## Business Context
+
+For users that need to keep track of a lot of information, it's easy to forget or be unable to recall something important. Being able to take persistent notes allows users to have written information available when needed.
+
+## Acceptance Criteria
+
+- [ ] Application should allow users to create and save notes.
+
+- [ ] Application should allow users to view previously saved notes.
+
+- [ ] Application should allow users to delete previously saved notes.
+
+## Requirements
+
+- [ ] You’ll have some boilerplate HTML/CSS and store to read/write JSON file, it's your job to build the backend and connect the two.
+
+<!-- Download file [NoteTaker.zip](https://drive.google.com/file/d/19pMYYKzGX1J8Gc8nlQx7ZVZxIFYUIUBo/view?usp=sharing). Remember to run app with `node server.js` for backend functionality -->
+
+## Back End Requirements
+
+- [ ] The following HTML routes should be created:
+
+  - [ ] <b>GET</b> `/notes` - Should return the `notes.html` file.
+
+  - [ ] <b>GET</b> `*` - Should return the `index.html` file
+
+- [ ] The application should have a `db.json` file on the backend that will be used to store and retrieve notes using the `fs` module.
+
+- [ ] The following API routes should be created:
+
+  - [ ] <b>GET</b> `/api/notes` - Should read the `db.json` file and return all saved notes as JSON.
+
+  - [ ] <b>POST</b> `/api/notes` - Should receive a new note to save on the request body, add it to the `db.json` file, and then return the new note to the client.
+
+  - [ ] <b>DELETE</b> `/api/notes/:id` - Should receive a query parameter containing the id of a note to delete. This means you'll need to find a way to give each note a unique `id` when it's saved. In order to delete a note, you'll need to read all notes from the `db.json` file, remove the note with the given `id` property, and then rewrite the notes to the `db.json` file.
+
+##
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.2.
 
 ## Development server
@@ -26,53 +92,12 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-
 <!-- # Express: Note Taker
 
-## Description
 
-Create an application that can be used to write, save, and delete notes. This application will use an express backend and save and retrieve note data from a JSON file.
 
-## Requirements
 
-- [x] You’ll have some boilerplate HTML/CSS and store to read/write JSON file, it's your job to build the backend and connect the two. Download file [NoteTaker.zip](https://drive.google.com/file/d/19pMYYKzGX1J8Gc8nlQx7ZVZxIFYUIUBo/view?usp=sharing). Remember to run app with `node server.js` for backend functionality
 
-- [x] The following HTML routes should be created:
-
-  - [x] GET `/notes` - Should return the `notes.html` file.
-
-  - [x] GET `*` - Should return the `index.html` file
-
-- [ ] The application should have a `db.json` file on the backend that will be used to store and retrieve notes using the `fs` module.
-
-- [ ] The following API routes should be created:
-
-  - [ ] GET `/api/notes` - Should read the `db.json` file and return all saved notes as JSON.
-
-  - [ ] POST `/api/notes` - Should receive a new note to save on the request body, add it to the `db.json` file, and then return the new note to the client.
-
-  - [ ] DELETE `/api/notes/:id` - Should receive a query parameter containing the id of a note to delete. This means you'll need to find a way to give each note a unique `id` when it's saved. In order to delete a note, you'll need to read all notes from the `db.json` file, remove the note with the given `id` property, and then rewrite the notes to the `db.json` file.
-
-## User Story
-
-```
-AS A user, I want to be able to write and save notes
-
-I WANT to be able to delete notes I've written before
-
-SO THAT I can organize my thoughts and keep track of tasks I need to complete
-```
-
-## Business Context
-
-For users that need to keep track of a lot of information, it's easy to forget or be unable to recall something important. Being able to take persistent notes allows users to have written information available when needed.
-
-## Acceptance Criteria
-
-- [ ] Application should allow users to create and save notes.
-
-- [ ] Application should allow users to view previously saved notes.
-
-- [ ] Application should allow users to delete previously saved notes. -->
+ -->
 
 [Learn how to use Font Awesome icons in Angular](https://www.angularjswiki.com/angular/how-to-use-font-awesome-icons-in-angular-applications/)

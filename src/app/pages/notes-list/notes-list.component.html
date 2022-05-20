@@ -12,7 +12,7 @@
         </div>
     </div>
 
-    <div class="notes-list">
+    <div class="notes-list" [@listAnimate]>
         <app-note-card *ngFor="let note of notes; index as i"
                        [link]=(i).toString()
                        [@itemAnimate]
