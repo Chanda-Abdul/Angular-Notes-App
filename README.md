@@ -20,7 +20,7 @@ Create an application that can be used to <b>write</b>, <b>save</b>, and <b>dele
 
 ## User Story
 
-```js<b>
+```js
 AS A user, I want to be able to write and save notes
 
 I WANT to be able to delete notes I've written before
@@ -48,7 +48,7 @@ For users that need to keep track of a lot of information, it's easy to forget o
 
 ## Back End Requirements
 
-- [ ] The following HTML routes should be created:
+- [ ] The following <s>HTML</s> routes should be created:
 
   - [ ] <b>GET</b> `/notes` - Should return the `notes.html` file.
 
